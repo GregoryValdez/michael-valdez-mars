@@ -1,0 +1,71 @@
+body {
+    background: #A6A6A8;
+    color: #272635;
+    font-family: "Macondo" Swash Caps, cursive;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-style: italic;
+    /* font-weight: bolder; */
+    font-size: 55px;
+    background: #E8E9F3;
+    color: #18748C;
+    text-align: center;
+    border: solid 5px #272635;
+    padding: 5px;
+    margin: 30px 20px;
+}
+
+.profile {
+    opacity: 0.8;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: ridge 15px #E8E9F3;
+}
+
+#About {
+    text-align: center;
+    padding: 0 60px;
+}
+
+h2 {
+    /* font-weight: bolder; */
+    font-size: 35px;
+    color: #E8E9F3;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    display: block;
+}
+
+li:hover {
+    background-color: #E8E9F3;
+    margin-right: 65%;
+    cursor: default;
+}
+
+a {
+    margin-left: 11px;
+}
+
+.github {
+    border-radius: 2px;
+}
+
+#Images {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.AFReserve {
+    padding-bottom: 5px;
+}
