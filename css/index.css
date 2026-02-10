@@ -1,3 +1,5 @@
+/* Desktop-first Approach */
+
 body {
     background: #A6A6A8;
     color: #E8E9F3;
@@ -141,25 +143,52 @@ li:hover, li:focus {
     margin-left: .75em;
 }
 
-@media screen and (max-width: 925px) { /* Tablet */
+/* Footer */
+.AFReserve {
+    padding-bottom: .25em;
+    margin-right: .5em;
+}
+
+@media screen and (max-width: 925px) { /* Tablet design */
    section, ul {
         text-align: center;
    }
   
-   ul, .icons {
+   ul {
         justify-content: center;
    }
     
     li {
         width: 100%;
+        box-shadow:inset 0 0 0 1px #E8E9F3;
     }
 
     #Connect {
         margin-bottom: 4em;
     }
+
+    .icons {
+        margin: 0 auto;
+        width: 30%;
+        background:#125769;
+        padding: .5em;
+        border-radius: 5px;
+        justify-content: center;
+        padding-left: 1.25em;
+   }
+
+    .AFReserve {
+        padding-bottom: .25em;
+        margin-right: 0;
+        margin-left: 1em;
+    }
+
+    .army {
+        margin-left: 1.5em;
+    }
 }
 
-@media screen and (max-width: 730px) { /* Phone */
+@media screen and (max-width: 730px) { /* Phone design */
     nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -185,10 +214,11 @@ li:hover, li:focus {
 
     .li-2 {
         margin: 0 auto .5em auto;
-
+        font-weight: bold;
     }
-}
+} 
 
+/* Connect */
 .github {
     border-radius: 2px;
 }
@@ -199,9 +229,4 @@ footer {
     margin-top: 3em;
     text-align: center;
     padding: .5em 0;
-}
-
-.AFReserve {
-    padding-bottom: .25em;
-    margin-right: .5em;
 }
