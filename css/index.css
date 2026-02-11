@@ -1,3 +1,5 @@
+/* Desktop-first Approach */
+
 body {
     background: #A6A6A8;
     color: #E8E9F3;
@@ -8,22 +10,26 @@ body {
 
 header {
     position: sticky;
-    top: 10px;
+    top: .5em;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 2em;
     font-style:italic;
-    font-size: 22px;
+    font-size: 1.5rem;
 }
 
 a {
     text-decoration: none;
     color: #125769;
     font-weight: bold;
-    padding-right: 15px;
+    padding-right: 1em;
+}
+
+a:hover, a:focus {
+    color:#18748C
 }
 
 /* Section */
@@ -34,8 +40,8 @@ h1 {
     color: #18748C;
     text-align: center;
     border: solid 5px #272635;
-    padding: 5px;
-    margin: 30px 10px 30px 0;
+    padding: .25em;
+    margin: .75em .15em 1.5em 0;
 }
 
 .profile {
@@ -50,7 +56,7 @@ h1 {
 /* About */
 #About {
     text-align: center;
-    padding: 5px 5px;
+    padding: .5em .5em;
     width: 90%;
     margin: 0 auto;
     font-size: 1.25rem;
@@ -64,7 +70,7 @@ h2 {
 
 section {
     margin-bottom: 2em;
-    margin-left: 10px;
+    margin-left: .5em;
 }
 
 /* Experience */
@@ -86,9 +92,9 @@ li {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 45%;
-    margin-right: 45px;
-    margin-bottom: 25px;
-    padding: 5px 10px;
+    margin-right: 2.60em;
+    margin-bottom: 1.75em;
+    padding: .25em .5em;
 }
 
 .li-1 {
@@ -96,17 +102,25 @@ li {
     margin-bottom: .25em;
 }
 
-
+@media screen and (max-width: 1504px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 @media screen and (max-width: 1400px) {
   #Experience {
     background: #A6A6A8;
   }
 
+  ul {
+    flex-direction: row;
+  }
+
   li {
     background: #125769;
     width: 60%;
-    display: flex;
   }
 }
 
@@ -116,8 +130,8 @@ li {
     }
 }
 
-li:hover {
-    background-color: #125769;
+li:hover, li:focus {
+    background-color: #272635;
     cursor: default;
 }
 
@@ -125,12 +139,18 @@ li:hover {
 .icons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    margin-left: 10px;
+    gap: .5em;
+    margin-left: .75em;
 }
 
-@media screen and (max-width: 925px) {
-   ul {
+/* Footer */
+.AFReserve {
+    padding-bottom: .25em;
+    margin-right: .5em;
+}
+
+@media screen and (max-width: 925px) { /* Tablet design */
+   section, ul {
         text-align: center;
    }
   
@@ -140,28 +160,73 @@ li:hover {
     
     li {
         width: 100%;
+        box-shadow:inset 0 0 0 1px #E8E9F3;
+    }
+
+    #Connect {
+        margin-bottom: 4em;
+    }
+
+    .icons {
+        margin: 0 auto;
+        width: 30%;
+        background:#125769;
+        padding: .5em;
+        border-radius: 5px;
+        justify-content: center;
+        padding-left: 1.25em;
+   }
+
+    .AFReserve {
+        padding-bottom: .25em;
+        margin-right: 0;
+        margin-left: 1em;
+    }
+
+    .army {
+        margin-left: 1.5em;
     }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 730px) { /* Phone design */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 3.25rem;
+        margin: .5em .15em 1.25em 0;
+    }
+
+    .main {
+        margin-bottom: 0;
+    }
+
+    #About, ul {
+        font-size: 1.15rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
     .li-2 {
         margin: 0 auto .5em auto;
-
+        font-weight: bold;
     }
-}
+} 
 
+/* Connect */
 .github {
     border-radius: 2px;
 }
 
+/* Footer */
 footer {
     background-color:#272635;
-    margin-top: 50px;
+    margin-top: 3em;
     text-align: center;
-    padding: 10px 0;
-}
-
-.AFReserve {
-    padding-bottom: 5px;
-    margin-right: 10px;
+    padding: .5em 0;
 }
