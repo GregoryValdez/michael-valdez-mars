@@ -18,6 +18,24 @@ header {
     background: #A6A6A8;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+    gap: .45em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1em; 
+}
+
+.hamburger span {
+    width: 3em; 
+    height: .30em;
+    background-color: #125769; 
+    transition: .3s;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -118,7 +136,7 @@ ul {
     background:#18748C;
     width: 45%;
     font-weight: bold;
-    box-shadow:#272635 0px 4px 8px -2px;
+    box-shadow:#272635 0px 4px 8px -2px; /* horizontal, vertical downward, edges of shadow softened, & negative to look more realistic */
     margin-right: 2.60em;
     margin-bottom: 1.75em;
     padding: .25em .5em;
@@ -127,6 +145,67 @@ ul {
 #skills li:hover, #skills li:focus {
     color:rgb(198, 25, 25);
     cursor: default;
+}
+
+/* Leave a Message */
+#leaveMessage h2 {
+    margin-bottom: 0;
+}
+
+#leaveMessage form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.label {
+    font-size: 1.25rem;
+    margin-top: 2.25em;
+    margin-left: 1em;
+    margin-right: .5em;
+}
+
+.label1 {
+    font-size: 1.25rem;
+    margin-top: 2.25em;
+    margin-left: 3em;
+    margin-right: .5em;
+}
+
+.label2 {
+    font-size: 1.25rem;
+    margin-left: .05em;
+    margin-top: 2.75em;
+    margin-right: .5em;
+}
+
+#leaveMessage input, #leaveMessage textarea{
+    width: 41%;
+    margin-top: 3em;
+    padding: .75em;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 0 0 0 1px #7c7c7d;
+}
+
+#leaveMessage button {
+    background: #125769;
+    color: #E8E9F3;
+    border: none;
+    font-size: 1rem;
+    margin-left: 7.6em;
+    margin-top: 3em;
+    padding: .5em 1em;
+    width: 42%;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: inset 0 0 0 1px #0d404d;
+    cursor: pointer;
+}
+
+#messages li {
+    width: 100%;
+    box-shadow: inset 0 0 0 1px #E8E9F3; 
 }
 
 .AFReserve {
@@ -146,6 +225,10 @@ ul {
 }
 
 @media screen and (max-width: 1400px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
   #Experience {
     background: #A6A6A8;
     padding-bottom: 0;
@@ -166,6 +249,35 @@ ul {
 
   #skills li {
     width: 60%;
+  }
+
+  #leaveMessage form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #leaveMessage form label {
+    margin-top: 1em;
+    margin: 1.5em auto 0 0;
+  }
+
+  #leaveMessage input, #leaveMessage textarea {
+    width: 62%;
+    margin-top: 1em;
+  }
+
+  #leaveMessage textarea {
+    margin-bottom: 1em;
+}
+
+  #leaveMessage button {
+    margin-left: 0;
+    padding: .75em;
+    width: 63%;
+  }
+
+  #leaveMessage button {
+    margin-left: .25em;
   }
 }
 
@@ -194,6 +306,32 @@ ul {
     margin-right: .5em;
 }
 
+@media screen and (max-width: 980px) {
+    nav {
+        flex-wrap: wrap;
+        position: absolute;
+        top: 2.45em; 
+        right: 0;
+        background: #A6A6A8; 
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        padding: .5em;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger:hover, .hamburger:focus {
+        background: #909098;
+    }
+}
+
 @media screen and (max-width: 925px) { /* Tablet design */
    section, ul, .li-2 {
         text-align: center;
@@ -205,7 +343,7 @@ ul {
     
     li {
         width: 100%;
-        box-shadow:inset 0 0 0 1px #E8E9F3;
+        box-shadow: inset 0 0 0 1px #E8E9F3; /* Inner border */
     }
 
     .li-2 {
@@ -220,11 +358,31 @@ ul {
         margin: 0 auto;
         width: 30%;
         background:#535167;
-        box-shadow:#E8E9F3 0px 4px 8px -2px;
+        box-shadow:#E8E9F3 0px 4px 8px -2px; 
         padding: .5em;
         border-radius: 5px;
         justify-content: center;
    }
+
+   #leaveMessage form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #leaveMessage form label {
+        margin: 1em auto 0 auto;
+    }
+
+    #leaveMessage input, #leaveMessage textarea {
+        margin: .5em;
+        padding: .75em; 
+        width: 60%;
+    }
+
+    #leaveMessage button {
+        width: 61%;
+    }
 
     .AFReserve {
         padding-bottom: .25em;
