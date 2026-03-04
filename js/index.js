@@ -70,3 +70,24 @@ messageForm.addEventListener('submit', (event) => {
     messageForm.reset(); // Clear the whole form after submission
 })
 
+fetch('https://api.github.com/users/GregoryValdez/repos')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(response.status);
+        }
+        return response.json();
+    })
+    .then(repo => {
+        const repositories = JSON.parse(JSON.stringify(repo)); // Creates a deep copy(deep clone) of an object or array.
+        console.log(repositories);
+        const projectSection = document.getElementById('Projects');
+        const projectList = projectSection.querySelector('ul');
+        repositories.forEach(repo => {
+            const project = document.createElement('li');
+            project.innerText = repo.name;
+            projectList.appendChild(project);
+        })
+    })
+    .catch(error => {
+        console.error('Error fetching repositories:', error);
+    })
